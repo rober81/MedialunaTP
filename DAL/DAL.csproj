@@ -41,14 +41,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Acceso.cs" />
+    <Compile Include="backupDAL.cs" />
+    <Compile Include="BitacoraDal.cs" />
+    <Compile Include="DigitoVerificadorDAL.cs" />
+    <Compile Include="PanaderiasDAL.cs" />
+    <Compile Include="PermisosDal.cs" />
+    <Compile Include="ProductosDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsuariosDal.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BE\BE.csproj">
       <Project>{4153b151-ee43-47b8-a5fb-562e0d4475c1}</Project>
       <Name>BE</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
