@@ -60,5 +60,8 @@
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Script\base.sql" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -80,15 +80,98 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="administrador.aspx" />
+    <Content Include="alta_producto.aspx" />
+    <Content Include="backup.aspx" />
+    <Content Include="bitacora.aspx" />
+    <Content Include="crearUsuario.aspx" />
+    <Content Include="error.aspx" />
+    <Content Include="estilos\estilos.css" />
     <Content Include="Global.asax" />
+    <Content Include="imagenes\logo.png" />
+    <Content Include="imagenes\logoTXT.png" />
+    <Content Include="imagenes\mantenimiento.png" />
+    <Content Include="imgProductos\1.png" />
+    <Content Include="imgProductos\2.png" />
+    <Content Include="imgProductos\3.png" />
+    <Content Include="imgProductos\4.png" />
+    <Content Include="inicio.aspx" />
+    <Content Include="login.aspx" />
     <Content Include="Web.config" />
+    <Content Include="webmaster.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="administrador.aspx.cs">
+      <DependentUpon>administrador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="administrador.aspx.designer.cs">
+      <DependentUpon>administrador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="alta_producto.aspx.cs">
+      <DependentUpon>alta_producto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="alta_producto.aspx.designer.cs">
+      <DependentUpon>alta_producto.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="backup.aspx.cs">
+      <DependentUpon>backup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="backup.aspx.designer.cs">
+      <DependentUpon>backup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Base.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bitacora.aspx.cs">
+      <DependentUpon>bitacora.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bitacora.aspx.designer.cs">
+      <DependentUpon>bitacora.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="crearUsuario.aspx.cs">
+      <DependentUpon>crearUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="crearUsuario.aspx.designer.cs">
+      <DependentUpon>crearUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="error.aspx.cs">
+      <DependentUpon>error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="error.aspx.designer.cs">
+      <DependentUpon>error.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="inicio.aspx.cs">
+      <DependentUpon>inicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="inicio.aspx.designer.cs">
+      <DependentUpon>inicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="webmaster.aspx.cs">
+      <DependentUpon>webmaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="webmaster.aspx.designer.cs">
+      <DependentUpon>webmaster.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -105,6 +188,10 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BE\BE.csproj">
+      <Project>{4153B151-EE43-47B8-A5FB-562E0D4475C1}</Project>
+      <Name>BE</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BLL\BLL.csproj">
       <Project>{9b20badc-bf2d-4e01-8b86-a55a0cef3b9e}</Project>
       <Name>BLL</Name>
