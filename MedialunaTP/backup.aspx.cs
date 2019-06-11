@@ -7,7 +7,7 @@ namespace MedialunaTP
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            UsuarioLogueado(BLL.PermisosBLL.Admin());
+            UsuarioLogueado(BLL.PermisosBLL.Web());
             lblUsuario.Text = usuario.ToString();
         }
 

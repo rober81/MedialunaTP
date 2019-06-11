@@ -9,6 +9,9 @@ namespace MedialunaTP
         {
             UsuarioLogueado(BLL.PermisosBLL.Web());
             lblUsuario.Text = usuario.ToString();
+
+            txtResultado.Text = WebmasterBLL.verificarDVHBase(usuario);
+            txtResultado.Text += WebmasterBLL.verificarDVVerticalBase(usuario);
         }
 
         protected void btnCerrar_Click(object sender, EventArgs e)

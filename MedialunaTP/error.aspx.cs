@@ -14,7 +14,7 @@ namespace MedialunaTP
         Usuario usuario;
         protected void Page_Load(object sender, EventArgs e)
         {
-            string login = Session["Login"].ToString();
+            string login = Session["Login"] == null ? "" : Session["Login"].ToString();
 
             if (!string.IsNullOrWhiteSpace(login))
             {

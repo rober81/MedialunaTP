@@ -14,7 +14,7 @@ namespace MedialunaTP
         {
             verficarIntegridad();
 
-            string login = Session["Login"].ToString();
+            string login = Session["Login"] == null ? "": Session["Login"].ToString();
 
             if (!string.IsNullOrWhiteSpace(login))
             {
