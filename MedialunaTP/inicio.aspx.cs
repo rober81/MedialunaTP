@@ -1,5 +1,6 @@
 ﻿using BE;
 using BLL;
+using MedialunaTP.Webservices;
 using System;
 using System.Collections.Generic;
 using System.Web.UI.WebControls;
@@ -66,9 +67,11 @@ namespace MedialunaTP
         private void cargarTablaProductos()
         {
             lblPermiso.Text = "Listado de Productos";
-            List<BE.Producto> lista = ProductosBLL.listar();
 
-            foreach (var item in lista)
+            WebService1 web = new WebService1();
+            List<Webservices.Producto> listaWS = new List<Webservices.Producto>(web.ListarProductos());
+                      
+            foreach (var item in listaWS)
             {
                 TableRow fila = new TableRow();
 
