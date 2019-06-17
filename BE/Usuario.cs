@@ -1,7 +1,9 @@
-﻿namespace BE
-{
-    using System;
+﻿using System.Xml.Serialization;
+using System;
 
+namespace BE
+{
+    [Serializable]
     public class Usuario : Persona
     {
         private string _login;

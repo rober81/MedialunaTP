@@ -1,7 +1,10 @@
 ﻿using System;
+using System.Xml;
+using System.Xml.Serialization;
 
 namespace BE
 {
+    [Serializable]
     public class Bitacora : DigitoVerificador
     {
         private Usuario _usuario;
@@ -16,7 +19,6 @@ namespace BE
                 _usuario = value;
             }
         }
-
         private string _accion;
         public string accion
         {
@@ -29,7 +31,6 @@ namespace BE
                 _accion = value;
             }
         }
-
         private DateTime _fecha;
         public DateTime fecha
         {
@@ -42,7 +43,6 @@ namespace BE
                 _fecha = value;
             }
         }
-
         public override string verificar()
         {
             string usr = "";

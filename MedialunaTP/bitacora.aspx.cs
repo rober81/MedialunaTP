@@ -1,6 +1,12 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Web.UI.WebControls;
+using System.Xml.Serialization;
+using System.Xml.XPath;
+using System.Xml;
+using System.IO;
+using System.Security;
 
 namespace MedialunaTP
 {
@@ -22,7 +28,22 @@ namespace MedialunaTP
         {
             List<BE.Bitacora> lista = BLL.BitacoraBLL.listar();
 
-            foreach (var item in lista)
+            XmlSerializer ser = new XmlSerializer(typeof(List<BE.Bitacora>));
+            string ruta;
+            ruta = @"C:\Backups\sertest.xml";
+
+            using (FileStream fs = new FileStream(ruta, FileMode.Create, FileAccess.Write, FileShare.None))
+            {
+                ser.Serialize(fs, lista);
+            }
+
+            XPathDocument xPathDocumen = new XPathDocument(@"C:\Backups\sertest.xml");
+            XPathNavigator xnavegador;
+            XPathNodeIterator iterator;
+            xnavegador = xPathDocumen.CreateNavigator();
+            iterator = xnavegador.Select("ArrayOfBitacora/Bitacora");
+
+            foreach (XPathNavigator item in iterator)
             {
                 TableRow fila = new TableRow();
 
@@ -32,14 +53,12 @@ namespace MedialunaTP
                 TableCell accion = new TableCell();
                 TableCell fecha = new TableCell();
 
-                id.Text = item.id.ToString();
-                if (item.usuario != null)
-                {
-                    usuario.Text = item.usuario.login;
-                    usuario2.Text = item.usuario.ToString();
-                }
-                accion.Text = item.accion;
-                fecha.Text = item.fecha.ToString("dd/MM/yyyy H:mm:ss");
+                id.Text = item.SelectSingleNode(xnavegador.Compile("id")).Value;
+                usuario.Text = item.SelectSingleNode(xnavegador.Compile("usuario/login")).Value;
+                usuario2.Text = item.SelectSingleNode(xnavegador.Compile("usuario/nombre")).Value;
+                usuario2.Text += item.SelectSingleNode(xnavegador.Compile("usuario/apellido")).Value;
+                accion.Text = item.SelectSingleNode(xnavegador.Compile("accion")).Value;
+                fecha.Text = item.SelectSingleNode(xnavegador.Compile("fecha")).Value;
 
                 fila.Cells.Add(id);
                 fila.Cells.Add(usuario);
