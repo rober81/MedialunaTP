@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BE;
+using BLL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -21,6 +23,13 @@ namespace WebService
         public string HelloWorld()
         {
             return "Hola a todos";
+        }
+
+        [WebMethod]
+        public List<BE.Producto> ListarProductos()
+        {
+            List<BE.Producto> lista = ProductosBLL.listar();
+            return lista;
         }
     }
 }
