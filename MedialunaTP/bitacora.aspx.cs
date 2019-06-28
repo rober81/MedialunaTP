@@ -30,14 +30,14 @@ namespace MedialunaTP
 
             XmlSerializer ser = new XmlSerializer(typeof(List<BE.Bitacora>));
             string ruta;
-            ruta = @"C:\Backups\sertest.xml";
+            ruta = AppDomain.CurrentDomain.BaseDirectory + @"\sertest.xml";
 
             using (FileStream fs = new FileStream(ruta, FileMode.Create, FileAccess.Write, FileShare.None))
             {
                 ser.Serialize(fs, lista);
             }
 
-            XPathDocument xPathDocumen = new XPathDocument(@"C:\Backups\sertest.xml");
+            XPathDocument xPathDocumen = new XPathDocument(AppDomain.CurrentDomain.BaseDirectory + @"\sertest.xml");
             XPathNavigator xnavegador;
             XPathNodeIterator iterator;
             xnavegador = xPathDocumen.CreateNavigator();

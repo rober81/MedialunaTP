@@ -11,7 +11,30 @@
     <Grid>
         <Button x:Name="button" Content="Comprar" HorizontalAlignment="Left" Margin="281,556,0,0" VerticalAlignment="Top" Click="button_Click"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Medialunas" VerticalAlignment="Top" FontSize="60"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="58,386,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>
+        <ListView x:Name="listView" HorizontalAlignment="Left" Height="394" Margin="10,104,0,0" VerticalAlignment="Top" Width="380">
+            <ListViewItem Content="Medialuna" FontSize="30">
+                <ListViewItem.Background>
+                    <ImageBrush ImageSource="ms-appx:/Assets/1.png" Stretch="Uniform"/>
+                </ListViewItem.Background>
+            </ListViewItem>
+            <ListViewItem Content="Vigilante" FontSize="30">
+                <ListViewItem.Background>
+                    <ImageBrush ImageSource="Assets/2.png" Stretch="Uniform"/>
+                </ListViewItem.Background>
+            </ListViewItem>
+            <ListViewItem Content="Tortita Negra" FontSize="27">
+                <ListViewItem.Background>
+                    <ImageBrush ImageSource="Assets/3.png" Stretch="Uniform"/>
+                </ListViewItem.Background>
+            </ListViewItem>
+            <ListViewItem/>
+            <ListViewItem Content="Bolita de Fraile" FontSize="24">
+                <ListViewItem.Background>
+                    <ImageBrush ImageSource="Assets/4.png" Stretch="Uniform"/>
+                </ListViewItem.Background>
+            </ListViewItem>
+
+        </ListView>
 
     </Grid>
 </Page>
