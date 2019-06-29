@@ -9,7 +9,7 @@ namespace DAL
 
         public Acceso()
         {
-            conexion = new SqlConnection(@"INITIAL CATALOG=Medialunas; DATA SOURCE=.; INTEGRATED SECURITY= SSPI");
+            conexion = new SqlConnection(@"INITIAL CATALOG=Medialunas; DATA SOURCE=.\SQL_UAI; INTEGRATED SECURITY= SSPI");
         }
 
         public void abrir()

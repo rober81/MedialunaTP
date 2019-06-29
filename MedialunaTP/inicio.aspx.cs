@@ -69,8 +69,8 @@ namespace MedialunaTP
             lblPermiso.Text = "Listado de Productos";
 
             WebService1 web = new WebService1();
-            //List<Webservices.Producto> listaWS = new List<Webservices.Producto>(web.ListarProductos());
-            List<BE.Producto> listaWS = ProductosBLL.listar();
+            List<Webservices.Producto> listaWS = new List<Webservices.Producto>(web.ListarProductos());
+            //List<BE.Producto> listaWS = ProductosBLL.listar();
 
 
             foreach (var item in listaWS)
