@@ -29,7 +29,6 @@ namespace Mobile
             this.NavigationCacheMode = NavigationCacheMode.Required;
             lista = new List<Producto>();
             cargarProductos();
-            ListView.ItemsSourceProperty = lista;
         }
 
         private void cargarProductos()
