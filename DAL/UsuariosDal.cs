@@ -23,7 +23,7 @@ namespace DAL
                 obj.apellido = item["apellido"].ToString();
                 obj.correo = item["correo"].ToString();
                 obj.intentosLogin = int.Parse(item["intentos"].ToString());
-                obj.habilitado = bool.Parse(item["habilitado"].ToString());
+                obj.habilitado = int.Parse(item["habilitado"].ToString()) == 0;
                 obj.DVH = item["DVH"].ToString();
                 lista.Add(obj);
             }
@@ -90,7 +90,7 @@ namespace DAL
                 obj.apellido = item["apellido"].ToString();
                 obj.correo = item["correo"].ToString();
                 obj.intentosLogin = int.Parse(item["intentos"].ToString());
-                obj.habilitado = bool.Parse(item["habilitado"].ToString());
+                obj.habilitado = int.Parse(item["habilitado"].ToString()) == 0;
                 obj.DVH = item["DVH"].ToString();
             }
             if (obj != null)
@@ -121,7 +121,7 @@ namespace DAL
                 obj.apellido = item["apellido"].ToString();
                 obj.correo = item["correo"].ToString();
                 obj.intentosLogin = int.Parse(item["intentos"].ToString());
-                obj.habilitado = bool.Parse(item["habilitado"].ToString());
+                obj.habilitado = int.Parse(item["habilitado"].ToString()) == 0;
                 obj.DVH = item["DVH"].ToString();
             }
             if (obj != null)
